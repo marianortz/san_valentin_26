@@ -90,5 +90,6 @@ estilo_footer = """
 st.markdown(estilo_footer, unsafe_allow_html=True)
 
 
-st.markdown('<div class="footer">Todo esto fue creado 99% por mi solín solita porque te quería enseñar un poquito de lo que hago (el otro 1% fue este pie, porque no sabía cómo hacerlo)', unsafe_allow_html=True)
+st.markdown('<div class="footer">Todo esto fue creado 99% por mí solín solita porque te quería enseñar un poquito de lo que hago (el otro 1% fue este pie, porque no sabía cómo hacerlo)', unsafe_allow_html=True)
+
 
