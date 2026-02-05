@@ -81,7 +81,7 @@ estilo_footer = """
     color: black;
     text-align: center;
     padding: 10px;
-    font-size: 14px;
+    font-size: 12px;
     border-top: 1px solid #dcdcdc;
     z-index: 1000; /* Asegura que quede encima de otros elementos */
 }
@@ -91,3 +91,4 @@ st.markdown(estilo_footer, unsafe_allow_html=True)
 
 
 st.markdown('<div class="footer">Todo esto fue creado 99% por mi solín solita porque te quería enseñar un poquito de lo que hago (el otro 1% fue este pie, porque no sabía cómo hacerlo)', unsafe_allow_html=True)
+
