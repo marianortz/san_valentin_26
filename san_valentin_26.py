@@ -3,11 +3,12 @@ import streamlit as st
 if "etapa" not in st.session_state:
     st.session_state.etapa = "inicio"
 
-st.title("💗 Feliz Día de Amor y de Amistad")
-st.write("(Pero más del amor)")
+st.markdown("<h1 style='text-align: center;'>Feliz Día del Amor y de la Amistad</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>(pero más del amor)</p>", unsafe_allow_html=True)
 st.image("foto1.jpg")
 
-st.header("Elige tu regalo de san valentín:")
+st.markdown("---")
+st.markdown("<h2 style='text-align: center;'>Elige tu regalo:</h2>", unsafe_allow_html=True)
 
 if st.session_state.etapa == "inicio":
     col1, col2, col3 = st.columns(3)
@@ -15,15 +16,16 @@ if st.session_state.etapa == "inicio":
     if col1.button("Un postre 🍰"):
         st.session_state.etapa = "opcion"
         st.rerun ()
-    if col2.button("Una cena 🕯️"):
+    if col2.button("Una cena 🍽️"):
         st.session_state.etapa = "opcion"
         st.rerun ()
     if col3.button("Unas tangas (para mí) 👙"):
         st.session_state.etapa = "correcta"
+        st.rerun()
 
 elif st.session_state.etapa == "opcion":
-    st.write("¿Estás seguro?")
     st.image("foto4.png", width=100)
+    st.write("¿Estás seguro?")
     st.write("Podrías mejorar tu regalo")
 
     c_si, c_no = st.columns(2)
@@ -36,8 +38,8 @@ elif st.session_state.etapa == "opcion":
         st.rerun()
 
 elif st.session_state.etapa == "vuelve_a_pensar":
-    st.write("Vuelve a pensarlo")
     st.image("foto3.png", width=100)
+    st.write("Vuelve a pensarlo")
     st.write("¿Estás seguro?")
 
     c_si, c_no = st.columns(2)
@@ -68,7 +70,7 @@ elif st.session_state.etapa == "correcta":
     st.write("Ya después hablamos de las condiciones")
     if st.button("Regresar al inicio"):
         st.session_state.etapa = "inicio"
-
+        st.rerun()
 
 estilo_footer = """
 <style>
@@ -88,8 +90,6 @@ estilo_footer = """
 </style>
 """
 st.markdown(estilo_footer, unsafe_allow_html=True)
-
-
-st.markdown('<div class="footer">Todo esto fue creado 99% por mí solín solita porque te quería enseñar un poquito de lo que hago (el otro 1% fue este pie, porque no sabía cómo hacerlo)', unsafe_allow_html=True)
+st.markdown('<div class="footer">Todo esto fue creado 99% por mi solín solita porque te quería enseñar un poquito de lo que hago (el otro 1% fue este pie, porque no sabía cómo agregarlo)', unsafe_allow_html=True)
 
 
